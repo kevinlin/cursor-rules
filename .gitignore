@@ -1,4 +1,4 @@
-# 操作系统生成的文件
+# OS generated files
 .DS_Store
 .DS_Store?
 ._*
@@ -7,7 +7,7 @@
 ehthumbs.db
 Thumbs.db
 
-# IDE和编辑器
+# IDE and Editors
 ## Visual Studio Code
 .vscode/*
 !.vscode/settings.json
@@ -30,19 +30,19 @@ Thumbs.db
 out/
 atlassian-ide-plugin.xml
 
-# 依赖包目录
+# Dependency directories
 node_modules/
 jspm_packages/
 bower_components/
 
-# 构建输出
+# Build outputs
 dist/
 build/
 out/
 *.min.js
 *.min.css
 
-# 日志
+# Logs
 logs
 *.log
 npm-debug.log*
@@ -50,7 +50,7 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# 环境变量和秘钥
+# Environment variables and secrets
 .env
 .env.local
 .env.development.local
@@ -59,17 +59,17 @@ lerna-debug.log*
 .env.*.local
 *.pem
 
-# 测试覆盖率
+# Test coverage
 coverage/
 .nyc_output/
 
-# 临时文件
+# Temporary files
 tmp/
 temp/
 *.swp
 *.swo
 
-# 缓存目录
+# Cache directories
 .npm
 .eslintcache
 .stylelintcache
