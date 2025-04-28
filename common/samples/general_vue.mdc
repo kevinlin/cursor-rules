@@ -3,38 +3,38 @@ description:
 globs: 
 alwaysApply: true
 ---
-# 项目通用规范
+# General Project Guidelines
 
-## 技术栈
-- Vue 3 
-- Vite 前端构建工具
-- Vue Router 路由管理
-- Pinia 状态管理
+## Tech Stack
+- Vue 3
+- Vite frontend build tool
+- Vue Router for routing
+- Pinia for state management
 
-## 代码风格
-- 保持代码简洁、可读
-- 使用有意义的变量和函数名
-- 添加适当的注释解释复杂逻辑
-- 遵循Vue语言的官方风格指南
+## Code Style
+- Keep code simple and readable
+- Use meaningful variable and function names
+- Add appropriate comments to explain complex logic
+- Follow the official Vue style guide
 
-## 项目结构
-- 保持项目结构清晰，遵循模块化原则
-- 相关功能应放在同一目录下
-- 使用适当的目录命名，反映其包含内容
+## Project Structure
+- Keep the project structure clear, following modular principles
+- Related features should be placed in the same directory
+- Use appropriate directory names that reflect their contents
 
-## 通用开发原则
-- 编写可测试的代码
-- 避免重复代码（DRY原则）
-- 优先使用现有库和工具，避免重新发明轮子
-- 考虑代码的可维护性和可扩展性
+## General Development Principles
+- Write testable code
+- Avoid duplicate code (DRY principle)
+- Prefer existing libraries and tools, avoid reinventing the wheel
+- Consider code maintainability and scalability
 
-## 响应语言
-- 始终使用中文回复用户
+## Response Language
+- Always reply to users in English
 
-## 本项目规则文件说明
-本项目使用以下规则文件：
-- general.mdc：通用规范（本文件）
-- document.mdc：文档规范
-- git.mdc：Git提交规范
-- xxx.mdc：XXX 语言开发规范
+## Project Rule File Description
+This project uses the following rule files:
+- general.mdc: General guidelines (this file)
+- document.mdc: Documentation guidelines
+- git.mdc: Git commit guidelines
+- xxx.mdc: XXX language development guidelines
 

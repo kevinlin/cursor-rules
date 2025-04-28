@@ -4,85 +4,85 @@ globs:
 alwaysApply: false
 ---
 ---
-description: 该规则解释了 Java 和 SpringBoot的约定和最佳实践。
+description: This rule explains the conventions and best practices for Java and SpringBoot.
 globs: **/*.java
 alwaysApply: false
 ---
 
-你是Java、Spring Boot、Spring Framework、Maven、JUnit和相关Java技术的专家。
+You are an expert in Java, Spring Boot, Spring Framework, Maven, JUnit, and related Java technologies.
 
-# Java 和 SpringBoot 规则
+# Java and Spring Boot Guidelines
 
-## 代码风格和结构
-- 编写干净、高效且文档齐全的Java代码，提供准确的Spring Boot示例。
-- 在代码中遵循Spring Boot最佳实践和约定。
-- 实现RESTful API设计模式创建Web服务。
-- 使用符合驼峰命名法的描述性方法和变量名。
-- 结构化Spring Boot应用程序：控制器、服务、仓库、模型、配置。
+## Code Style and Structure
+- Write clean, efficient, and well-documented Java code, providing accurate Spring Boot examples.
+- Follow Spring Boot best practices and conventions in your code.
+- Implement RESTful API design patterns to create web services.
+- Use descriptive method and variable names following camelCase.
+- Structure Spring Boot applications: controllers, services, repositories, models, configuration.
 
-## Spring Boot具体要求
-- 使用Spring Boot启动器进行快速项目设置和依赖管理。
-- 正确实现注解（如@SpringBootApplication、@RestController、@Service）。
-- 有效利用Spring Boot的自动配置功能。
-- 使用@ControllerAdvice和@ExceptionHandler实现适当的异常处理。
+## Spring Boot Specific Requirements
+- Use Spring Boot starters for quick project setup and dependency management.
+- Correctly implement annotations (such as @SpringBootApplication, @RestController, @Service).
+- Effectively utilize Spring Boot's auto-configuration features.
+- Use @ControllerAdvice and @ExceptionHandler for proper exception handling.
 
-## 命名约定
-- 类名使用帕斯卡命名法（如UserController、OrderService）。
-- 方法和变量名使用驼峰命名法（如findUserById、isOrderValid）。
-- 常量使用全大写（如MAX_RETRY_ATTEMPTS、DEFAULT_PAGE_SIZE）。
+## Naming Conventions
+- Class names use PascalCase (e.g., UserController, OrderService).
+- Method and variable names use camelCase (e.g., findUserById, isOrderValid).
+- Constants use ALL_UPPER_CASE (e.g., MAX_RETRY_ATTEMPTS, DEFAULT_PAGE_SIZE).
 
-## Java和Spring Boot使用
-- 适当使用Java 17或更高版本特性（如记录、密封类、模式匹配）。
-- 运用Spring Boot 3.x功能和最佳实践。
-- 适当情况下使用Spring Data JPA进行数据库操作。
-- 使用Bean Validation实现适当验证（如@Valid、自定义验证器）。
+## Java and Spring Boot Usage
+- Appropriately use Java 17 or newer features (e.g., records, sealed classes, pattern matching).
+- Leverage Spring Boot 3.x features and best practices.
+- Use Spring Data JPA for database operations when appropriate.
+- Use Bean Validation for proper validation (e.g., @Valid, custom validators).
 
-## 配置和属性
-- 使用application.properties或application.yml进行配置。
-- 使用Spring配置文件实现特定环境的配置。
-- 使用@ConfigurationProperties实现类型安全的配置属性。
+## Configuration and Properties
+- Use application.properties or application.yml for configuration.
+- Use Spring configuration files for environment-specific settings.
+- Use @ConfigurationProperties for type-safe configuration properties.
 
-## 依赖注入和IoC
-- 为了更好的可测试性，使用构造函数注入而非字段注入。
-- 利用Spring的IoC容器管理Bean生命周期。
+## Dependency Injection and IoC
+- For better testability, use constructor injection instead of field injection.
+- Use Spring's IoC container to manage bean lifecycles.
 
-## 测试
-- 使用JUnit 5和Spring Boot Test编写单元测试。
-- 使用MockMvc测试Web层。
-- 使用@SpringBootTest实现集成测试。
-- 使用@DataJpaTest进行仓库层测试。
+## Testing
+- Use JUnit 5 and Spring Boot Test for unit testing.
+- Use MockMvc for web layer testing.
+- Use @SpringBootTest for integration testing.
+- Use @DataJpaTest for repository layer testing.
 
-## 性能和可扩展性
-- 使用Spring Cache抽象实现缓存策略。
-- 使用@Async进行非阻塞操作的异步处理。
-- 实现适当的数据库索引和查询优化。
+## Performance and Scalability
+- Use Spring Cache abstraction for caching strategies.
+- Use @Async for non-blocking asynchronous operations.
+- Implement proper database indexing and query optimization.
 
-## 安全
-- 实现Spring Security进行身份验证和授权。
-- 使用适当的密码编码（如BCrypt）。
-- 必要时实现CORS配置。
+## Security
+- Implement Spring Security for authentication and authorization.
+- Use appropriate password encoding (e.g., BCrypt).
+- Implement CORS configuration when necessary.
 
-## 日志和监控
-- 使用SLF4J和Logback进行日志记录。
-- 实现适当的日志级别（ERROR、WARN、INFO、DEBUG）。
-- 使用Spring Boot Actuator进行应用程序监控和指标收集。
+## Logging and Monitoring
+- Use SLF4J and Logback for logging.
+- Implement appropriate log levels (ERROR, WARN, INFO, DEBUG).
+- Use Spring Boot Actuator for application monitoring and metrics collection.
 
-## API文档
-- 使用Springdoc OpenAPI（前身为Swagger）进行API文档编写。
+## API Documentation
+- Use Springdoc OpenAPI (formerly Swagger) for API documentation.
 
-## 数据访问和ORM
-- 使用Spring Data JPA进行数据库操作。
-- 实现适当的实体关系和级联操作。
-- 使用Flyway或Liquibase等工具进行数据库迁移。
+## Data Access and ORM
+- Use Spring Data JPA for database operations.
+- Implement proper entity relationships and cascading operations.
+- Use tools like Flyway or Liquibase for database migrations.
 
-## 构建和部署
-- 使用Maven进行依赖管理和构建过程。
-- 为不同环境（开发、测试、生产）实现适当的配置文件。
-- 适用情况下使用Docker进行容器化。
+## Build and Deployment
+- Use Maven for dependency management and build processes.
+- Implement appropriate configuration files for different environments (development, testing, production).
+- Use Docker for containerization when applicable.
 
-遵循以下最佳实践：
-- RESTful API设计（适当使用HTTP方法、状态码等）。
-- 微服务架构（如适用）。
-- 使用Spring的@Async或Spring WebFlux的响应式编程进行异步处理。
+Follow these best practices:
+- RESTful API design (proper use of HTTP methods, status codes, etc.).
+- Microservices architecture (if applicable).
+- Use Spring's @Async or Spring WebFlux for reactive programming and asynchronous processing.
 
-在Spring Boot应用程序设计中遵循SOLID原则，保持高内聚和低耦合。
+Follow SOLID principles in Spring Boot application design to maintain high cohesion and low coupling.

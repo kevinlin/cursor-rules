@@ -9,84 +9,84 @@ globs: **/*.vue
 alwaysApply: false
 ---
 
-# Vue.js 规则
+# Vue.js Guidelines
 
-## 组件结构
-- 使用组合式 API 而非选项式 API
-- 保持组件小巧且专注
-- 正确集成 TypeScript
-- 实现适当的 props 验证
-- 使用正确的 emit 声明
-- 保持模板逻辑简洁
+## Component Structure
+- Use the Composition API instead of the Options API
+- Keep components small and focused
+- Integrate TypeScript correctly
+- Implement proper props validation
+- Use correct emit declarations
+- Keep template logic simple
 
-## 组合式 API
-- 正确使用 ref 和 reactive
-- 实现适当的生命周期钩子
-- 使用 composables 实现可复用逻辑
-- 保持 setup 函数整洁
-- 正确使用计算属性
-- 实现适当的侦听器
+## Composition API
+- Use ref and reactive correctly
+- Implement appropriate lifecycle hooks
+- Use composables for reusable logic
+- Keep the setup function clean
+- Use computed properties correctly
+- Implement appropriate watchers
 
-## 状态管理
-- 使用 Pinia 进行状态管理
-- 保持 stores 模块化
-- 使用适当的状态组合
-- 实现适当的 actions
-- 正确使用 getters
-- 适当处理异步状态
+## State Management
+- Use Pinia for state management
+- Keep stores modular
+- Use appropriate state composition
+- Implement appropriate actions
+- Use getters correctly
+- Handle asynchronous state appropriately
 
-## 性能
-- 正确使用组件懒加载
-- 实现适当的缓存
-- 正确使用计算属性
-- 避免不必要的侦听器
-- 正确使用 v-show 与 v-if
-- 实现适当的 key 管理
+## Performance
+- Use component lazy loading correctly
+- Implement proper caching
+- Use computed properties correctly
+- Avoid unnecessary watchers
+- Use v-show and v-if correctly
+- Implement proper key management
 
-## 路由
-- 正确使用 Vue Router
-- 实现适当的导航守卫
-- 正确使用路由元字段
-- 适当处理路由参数
-- 实现适当的懒加载
-- 使用适当的导航方法
+## Routing
+- Use Vue Router correctly
+- Implement appropriate navigation guards
+- Use route meta fields correctly
+- Handle route parameters appropriately
+- Implement proper lazy loading
+- Use appropriate navigation methods
 
-## 表单
-- 正确使用 v-model
-- 实现适当的验证
-- 适当处理表单提交
-- 显示适当的加载状态
-- 使用适当的错误处理
-- 实现适当的表单重置
+## Forms
+- Use v-model correctly
+- Implement proper validation
+- Handle form submission appropriately
+- Show appropriate loading states
+- Use proper error handling
+- Implement proper form reset
 
-## TypeScript 集成
-- 使用适当的组件类型定义
-- 实现适当的 prop 类型
-- 使用适当的 emit 声明
-- 处理适当的类型推断
-- 使用适当的 composable 类型
-- 实现适当的 store 类型
+## TypeScript Integration
+- Use appropriate component type definitions
+- Implement proper prop types
+- Use appropriate emit declarations
+- Handle type inference correctly
+- Use appropriate composable types
+- Implement proper store types
 
-## 测试
-- 编写适当的单元测试
-- 实现适当的组件测试
-- 正确使用 Vue Test Utils
-- 适当测试 composables
-- 实现适当的模拟
-- 测试异步操作
+## Testing
+- Write appropriate unit tests
+- Implement proper component tests
+- Use Vue Test Utils correctly
+- Test composables appropriately
+- Implement proper mocks
+- Test asynchronous operations
 
-## 最佳实践
-- 遵循 Vue 风格指南
-- 使用适当的命名约定
-- 保持组件组织有序
-- 实现适当的错误处理
-- 使用适当的事件处理
-- 为复杂逻辑编写文档
+## Best Practices
+- Follow the Vue Style Guide
+- Use appropriate naming conventions
+- Keep component organization tidy
+- Implement proper error handling
+- Use appropriate event handling
+- Write documentation for complex logic
 
-## 构建和工具
-- 使用 Vite 进行开发
-- 配置适当的构建设置
-- 正确使用环境变量
-- 实现适当的代码分割
-- 使用适当的资源处理
-- 配置适当的优化
+## Build and Tooling
+- Use Vite for development
+- Configure proper build settings
+- Use environment variables correctly
+- Implement proper code splitting
+- Handle resources appropriately
+- Configure proper optimizations

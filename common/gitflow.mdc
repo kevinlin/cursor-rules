@@ -3,112 +3,111 @@ description:
 globs: 
 alwaysApply: false
 ---
+# Gitflow Workflow Guidelines
 
-# Gitflow工作流规则
+## Main Branches
 
-## 主分支
-
-### main（或master）
-- 包含生产就绪代码
-- 永远不要直接提交到main分支
-- 只接受来自以下分支的合并：
-  - hotfix/* 分支
-  - release/* 分支
-- 每次合并后必须使用版本号标记
+### main (or master)
+- Contains production-ready code
+- Never commit directly to the main branch
+- Only accepts merges from the following branches:
+  - hotfix/* branches
+  - release/* branches
+- Each merge must be tagged with a version number
 
 ### develop
-- 主开发分支
-- 包含最新交付的开发变更
-- 功能分支的源分支
-- 永远不要直接提交到develop分支
+- Main development branch
+- Contains the latest delivered development changes
+- Source branch for feature branches
+- Never commit directly to the develop branch
 
-## 支持分支
+## Supporting Branches
 
 ### feature/*
-- 从develop分支创建
-- 合并回：develop
-- 命名约定：feature/[issue-id]-描述性名称
-- 示例：feature/123-user-authentication
-- 创建PR前必须与develop分支保持同步
-- 合并后删除
+- Created from the develop branch
+- Merged back into: develop
+- Naming convention: feature/[issue-id]-descriptive-name
+- Example: feature/123-user-authentication
+- Must be kept up to date with develop before creating a PR
+- Delete after merging
 
 ### release/*
-- 从develop分支创建
-- 合并回：
+- Created from the develop branch
+- Merged back into:
   - main
   - develop
-- 命名约定：release/vX.Y.Z
-- 示例：release/v1.2.0
-- 仅进行bug修复、文档编写及与发布相关的任务
-- 不添加新功能
-- 合并后删除
+- Naming convention: release/vX.Y.Z
+- Example: release/v1.2.0
+- Only for bug fixes, documentation, and release-related tasks
+- No new features
+- Delete after merging
 
 ### hotfix/*
-- 从main分支创建
-- 合并回：
+- Created from the main branch
+- Merged back into:
   - main
   - develop
-- 命名约定：hotfix/vX.Y.Z
-- 示例：hotfix/v1.2.1
-- 仅用于紧急生产环境修复
-- 合并后删除
+- Naming convention: hotfix/vX.Y.Z
+- Example: hotfix/v1.2.1
+- Only for urgent production fixes
+- Delete after merging
 
-## 提交信息
+## Commit Messages
 
-- 格式：`type(scope): description`
-- 类型：
-  - feat: 新功能
-  - fix: Bug修复
-  - docs: 文档变更
-  - style: 格式调整、缺失分号等
-  - refactor: 代码重构
-  - test: 添加测试
-  - chore: 维护任务
+- Format: `type(scope): description`
+- Types:
+  - feat: New feature
+  - fix: Bug fix
+  - docs: Documentation change
+  - style: Formatting, missing semicolons, etc.
+  - refactor: Code refactoring
+  - test: Add tests
+  - chore: Maintenance tasks
 
-## 版本控制
+## Version Control
 
-### 语义化版本
-- MAJOR版本用于不兼容的API变更
-- MINOR版本用于向后兼容的功能性变更
-- PATCH版本用于向后兼容的bug修复
+### Semantic Versioning
+- MAJOR version for incompatible API changes
+- MINOR version for backward-compatible functionality
+- PATCH version for backward-compatible bug fixes
 
-## Pull Request规则
+## Pull Request Rules
 
-1. 所有变更必须通过Pull Request进行
-2. 所需批准：至少1个
-3. CI检查必须通过
-4. 不允许直接提交到受保护分支（main, develop）
-5. 合并前分支必须保持最新
-6. 合并后删除分支
+1. All changes must go through a Pull Request
+2. Required approvals: at least 1
+3. CI checks must pass
+4. No direct commits to protected branches (main, develop)
+5. Branch must be up to date before merging
+6. Delete branch after merging
 
-## 分支保护规则
+## Branch Protection Rules
 
-### main和develop
-- 要求Pull Request审核
-- 要求状态检查通过
-- 要求分支保持最新
-- 限制规则包括管理员
-- 禁止强制推送
-- 禁止删除
+### main and develop
+- Require Pull Request review
+- Require status checks to pass
+- Require branch to be up to date
+- Restrictions apply to administrators
+- No force pushes
+- No branch deletion
 
-## 发布流程
+## Release Process
 
-1. 从develop创建release分支
-2. 更新版本号
-3. 修复任何与发布相关的问题
-4. 创建PR到main
-5. 合并到main后：
-   - 标记发布
-   - 合并回develop
-   - 删除release分支
+1. Create a release branch from develop
+2. Update the version number
+3. Fix any release-related issues
+4. Create a PR to main
+5. After merging to main:
+   - Tag the release
+   - Merge back to develop
+   - Delete the release branch
 
-## 热修复流程
+## Hotfix Process
 
-1. 从main创建hotfix分支
-2. 修复问题
-3. 更新patch版本号
-4. 创建PR到main
-5. 合并到main后：
-   - 标记发布
-   - 合并回develop
-   - 删除hotfix分支 
+1. Create a hotfix branch from main
+2. Fix the issue
+3. Update the patch version number
+4. Create a PR to main
+5. After merging to main:
+   - Tag the release
+   - Merge back to develop
+   - Delete the hotfix branch 

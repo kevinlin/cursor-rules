@@ -4,13 +4,17 @@ globs:
 alwaysApply: false
 ---
 ---
-description: 该规则解释了 TypeScript、React Native、Expo 和移动 UI 开发的使用方法和最佳实践。
+description: This rule explains the usage and best practices for TypeScript, React Native, Expo, and mobile UI development.
 globs: **/*.jsx,**/*.tsx
 alwaysApply: false
 ---
 
-# TypeScript、React Native、Expo 和移动 UI 开发规则
+# TypeScript, React Native, Expo, and Mobile UI Development Rules
 
+## Code Style and Structure
+- Write clear, readable code: Ensure your code is easy to read and understand. Use descriptive names for variables and functions.
+- Use function components: Prefer function components with hooks (useState, useEffect, etc.) over class components.
+- Component modularity: Break components down into smaller, reusable parts. Keep components focused on a single responsibility.
 ## 代码风格和结构
 - 编写清晰、可读的代码：确保你的代码易于阅读和理解。为变量和函数使用描述性名称。
 - 使用函数组件：优先使用带有钩子（useState, useEffect 等）的函数组件，而非类组件。
