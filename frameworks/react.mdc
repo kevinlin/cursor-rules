@@ -1,106 +1,78 @@
 ---
-description: 
-globs: 
-alwaysApply: false
----
----
-description: This rule explains React component patterns, hooks usage methods and best practices.
-globs: **/*.jsx,**/*.tsx
-alwaysApply: false
+description: React best practices and patterns for modern web applications
+globs: **/*.tsx, **/*.jsx, components/**/*
 ---
 
-# React Rules
+# React Best Practices
 
 ## Component Structure
-- Prefer function components over class components
+- Use functional components over class components
 - Keep components small and focused
 - Extract reusable logic into custom hooks
 - Use composition over inheritance
-- Use TypeScript to implement appropriate prop types
-- Break down large components into smaller, more focused components
+- Implement proper prop types with TypeScript
+- Split large components into smaller, focused ones
 
 ## Hooks
-- Follow Hooks rules
-- Use custom hooks to implement reusable logic
+- Follow the Rules of Hooks
+- Use custom hooks for reusable logic
 - Keep hooks focused and simple
 - Use appropriate dependency arrays in useEffect
-- Implement cleanup functionality in useEffect when needed
+- Implement cleanup in useEffect when needed
 - Avoid nested hooks
 
 ## State Management
-- Use useState to manage component local state
-- Use useReducer to handle complex state logic
-- Use Context API to share state
+- Use useState for local component state
+- Implement useReducer for complex state logic
+- Use Context API for shared state
 - Keep state as close to where it's used as possible
-- Avoid prop drilling through appropriate state management
-## 组件结构
-- 优先使用函数组件而非类组件
-- 保持组件小巧且专注
-- 将可复用逻辑提取到自定义 hook 中
-- 使用组合而非继承
-- 使用 TypeScript 实现适当的 prop 类型
-- 将大型组件拆分为更小、更专注的组件
+- Avoid prop drilling through proper state management
+- Use state management libraries only when necessary
 
-## Hooks
-- 遵循 Hooks 的规则
-- 使用自定义 hooks 实现可复用逻辑
-- 保持 hooks 专注且简单
-- 在 useEffect 中使用适当的依赖数组
-- 在需要时在 useEffect 中实现清理功能
-- 避免嵌套 hooks
+## Performance
+- Implement proper memoization (useMemo, useCallback)
+- Use React.memo for expensive components
+- Avoid unnecessary re-renders
+- Implement proper lazy loading
+- Use proper key props in lists
+- Profile and optimize render performance
 
-## 状态管理
-- 使用 useState 管理组件本地状态
-- 使用 useReducer 处理复杂状态逻辑
-- 使用 Context API 共享状态
-- 将状态尽可能靠近使用它的地方
-- 通过适当的状态管理避免 prop drilling
-- 仅在必要时使用状态管理库
+## Forms
+- Use controlled components for form inputs
+- Implement proper form validation
+- Handle form submission states properly
+- Show appropriate loading and error states
+- Use form libraries for complex forms
+- Implement proper accessibility for forms
 
-## 性能
-- 实现适当的记忆化(useMemo, useCallback)
-- 对开销大的组件使用 React.memo
-- 避免不必要的重新渲染
-- 实现适当的懒加载
-- 在列表中使用适当的 key 属性
-- 分析并优化渲染性能
+## Error Handling
+- Implement Error Boundaries
+- Handle async errors properly
+- Show user-friendly error messages
+- Implement proper fallback UI
+- Log errors appropriately
+- Handle edge cases gracefully
 
-## 表单
-- 对表单输入使用受控组件
-- 实现适当的表单验证
-- 正确处理表单提交状态
-- 显示适当的加载和错误状态
-- 对复杂表单使用表单库
-- 为表单实现适当的可访问性
+## Testing
+- Write unit tests for components
+- Implement integration tests for complex flows
+- Use React Testing Library
+- Test user interactions
+- Test error scenarios
+- Implement proper mock data
 
-## 错误处理
-- 实现 Error Boundaries
-- 正确处理异步错误
-- 显示用户友好的错误信息
-- 实现适当的备用 UI
-- 适当记录错误
-- 优雅处理边缘情况
+## Accessibility
+- Use semantic HTML elements
+- Implement proper ARIA attributes
+- Ensure keyboard navigation
+- Test with screen readers
+- Handle focus management
+- Provide proper alt text for images
 
-## 测试
-- 为组件编写单元测试
-- 为复杂流程实现集成测试
-- 使用 React Testing Library
-- 测试用户交互
-- 测试错误场景
-- 实现适当的模拟数据
-
-## 可访问性
-- 使用语义化 HTML 元素
-- 实现适当的 ARIA 属性
-- 确保键盘导航
-- 使用屏幕阅读器测试
-- 管理焦点
-- 为图片提供适当的 alt 文本
-
-## 代码组织
-- 将相关组件组织在一起
-- 使用适当的文件命名约定
-- 实现适当的目录结构
-- 保持样式靠近组件
-- 使用适当的导入/导出
-- 记录复杂的组件逻辑
+## Code Organization
+- Group related components together
+- Use proper file naming conventions
+- Implement proper directory structure
+- Keep styles close to components
+- Use proper imports/exports
+- Document complex component logic 

@@ -1,55 +1,78 @@
 ---
-description: 
-globs: 
-alwaysApply: false
----
----
-description: This rule explains Tailwind CSS conventions, utility classes, and best practices for modern UI development.
-globs: **/*.css
-alwaysApply: false
+description: Tailwind CSS and UI component best practices for modern web applications
+globs: **/*.css, **/*.tsx, **/*.jsx, tailwind.config.js, tailwind.config.ts
 ---
 
-# Tailwind CSS rules
+# Tailwind CSS Best Practices
 
-- Use responsive prefixes to implement mobile-first design:
+## Project Setup
+- Use proper Tailwind configuration
+- Configure theme extension properly
+- Set up proper purge configuration
+- Use proper plugin integration
+- Configure custom spacing and breakpoints
+- Set up proper color palette
 
-```html
-<div class="w-full md:w-1/2 lg:w-1/3">
-  <!-- Full width on mobile, half width on medium screens, one third width on large screens -->
-</div>
-```
+## Component Styling
+- Use utility classes over custom CSS
+- Group related utilities with @apply when needed
+- Use proper responsive design utilities
+- Implement dark mode properly
+- Use proper state variants
+- Keep component styles consistent
 
-- Use state variants for interactive elements:
+## Layout
+- Use Flexbox and Grid utilities effectively
+- Implement proper spacing system
+- Use container queries when needed
+- Implement proper responsive breakpoints
+- Use proper padding and margin utilities
+- Implement proper alignment utilities
 
-```html
-<button class="bg-blue-500 hover:bg-blue-600 focus:ring-2">
-  Click me
-</button>
-```
+## Typography
+- Use proper font size utilities
+- Implement proper line height
+- Use proper font weight utilities
+- Configure custom fonts properly
+- Use proper text alignment
+- Implement proper text decoration
 
-- Use @apply for repeating patterns when necessary:
+## Colors
+- Use semantic color naming
+- Implement proper color contrast
+- Use opacity utilities effectively
+- Configure custom colors properly
+- Use proper gradient utilities
+- Implement proper hover states
 
-```css
-@layer components {
-  .btn-primary {
-    @apply px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600;
-  }
-}
-```
+## Components
+- Use shadcn/ui components when available
+- Extend components properly
+- Keep component variants consistent
+- Implement proper animations
+- Use proper transition utilities
+- Keep accessibility in mind
 
-- Use arbitrary values for specific needs:
+## Responsive Design
+- Use mobile-first approach
+- Implement proper breakpoints
+- Use container queries effectively
+- Handle different screen sizes properly
+- Implement proper responsive typography
+- Use proper responsive spacing
 
-```html
-<div class="top-[117px] grid-cols-[1fr_2fr]">
-  <!-- Custom positioning and grid layout -->
-</div>
-```
+## Performance
+- Use proper purge configuration
+- Minimize custom CSS
+- Use proper caching strategies
+- Implement proper code splitting
+- Optimize for production
+- Monitor bundle size
 
-- Use spacing tools to achieve consistent layouts:
-
-```html
-<div class="space-y-4">
-  <div>Project 1</div>
-  <div>Project 2</div>
-</div>
-``` 
+## Best Practices
+- Follow naming conventions
+- Keep styles organized
+- Use proper documentation
+- Implement proper testing
+- Follow accessibility guidelines
+- Use proper version control 

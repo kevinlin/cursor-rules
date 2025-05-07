@@ -1,56 +1,54 @@
 ---
-description: 
-globs: 
-alwaysApply: false
+description: Gitflow Workflow Rules. These rules should be applied when performing git operations.
 ---
-# Gitflow Workflow Guidelines
+# Gitflow Workflow Rules
 
 ## Main Branches
 
 ### main (or master)
 - Contains production-ready code
-- Never commit directly to the main branch
-- Only accepts merges from the following branches:
+- Never commit directly to main
+- Only accepts merges from:
   - hotfix/* branches
   - release/* branches
-- Each merge must be tagged with a version number
+- Must be tagged with version number after each merge
 
 ### develop
 - Main development branch
-- Contains the latest delivered development changes
+- Contains latest delivered development changes
 - Source branch for feature branches
-- Never commit directly to the develop branch
+- Never commit directly to develop
 
 ## Supporting Branches
 
 ### feature/*
-- Created from the develop branch
-- Merged back into: develop
+- Branch from: develop
+- Merge back into: develop
 - Naming convention: feature/[issue-id]-descriptive-name
 - Example: feature/123-user-authentication
-- Must be kept up to date with develop before creating a PR
-- Delete after merging
+- Must be up-to-date with develop before creating PR
+- Delete after merge
 
 ### release/*
-- Created from the develop branch
-- Merged back into:
+- Branch from: develop
+- Merge back into: 
   - main
   - develop
 - Naming convention: release/vX.Y.Z
 - Example: release/v1.2.0
-- Only for bug fixes, documentation, and release-related tasks
+- Only bug fixes, documentation, and release-oriented tasks
 - No new features
-- Delete after merging
+- Delete after merge
 
 ### hotfix/*
-- Created from the main branch
-- Merged back into:
+- Branch from: main
+- Merge back into:
   - main
   - develop
 - Naming convention: hotfix/vX.Y.Z
 - Example: hotfix/v1.2.1
 - Only for urgent production fixes
-- Delete after merging
+- Delete after merge
 
 ## Commit Messages
 
@@ -58,56 +56,56 @@ alwaysApply: false
 - Types:
   - feat: New feature
   - fix: Bug fix
-  - docs: Documentation change
+  - docs: Documentation changes
   - style: Formatting, missing semicolons, etc.
   - refactor: Code refactoring
-  - test: Add tests
+  - test: Adding tests
   - chore: Maintenance tasks
 
 ## Version Control
 
 ### Semantic Versioning
 - MAJOR version for incompatible API changes
-- MINOR version for backward-compatible functionality
-- PATCH version for backward-compatible bug fixes
+- MINOR version for backwards-compatible functionality
+- PATCH version for backwards-compatible bug fixes
 
 ## Pull Request Rules
 
-1. All changes must go through a Pull Request
-2. Required approvals: at least 1
+1. All changes must go through Pull Requests
+2. Required approvals: minimum 1
 3. CI checks must pass
 4. No direct commits to protected branches (main, develop)
 5. Branch must be up to date before merging
-6. Delete branch after merging
+6. Delete branch after merge
 
 ## Branch Protection Rules
 
-### main and develop
-- Require Pull Request review
+### main & develop
+- Require pull request reviews
 - Require status checks to pass
-- Require branch to be up to date
-- Restrictions apply to administrators
+- Require branches to be up to date
+- Include administrators in restrictions
 - No force pushes
-- No branch deletion
+- No deletions
 
 ## Release Process
 
-1. Create a release branch from develop
-2. Update the version number
-3. Fix any release-related issues
-4. Create a PR to main
-5. After merging to main:
-   - Tag the release
+1. Create release branch from develop
+2. Bump version numbers
+3. Fix any release-specific issues
+4. Create PR to main
+5. After merge to main:
+   - Tag release
    - Merge back to develop
-   - Delete the release branch
+   - Delete release branch
 
 ## Hotfix Process
 
-1. Create a hotfix branch from main
+1. Create hotfix branch from main
 2. Fix the issue
-3. Update the patch version number
-4. Create a PR to main
-5. After merging to main:
-   - Tag the release
+3. Bump patch version
+4. Create PR to main
+5. After merge to main:
+   - Tag release
    - Merge back to develop
-   - Delete the hotfix branch 
+   - Delete hotfix branch 
