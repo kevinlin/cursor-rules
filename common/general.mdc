@@ -3,39 +3,39 @@ description:
 globs: 
 alwaysApply: true
 ---
+---
+description: General project standards and basic information
+globs: ["*"]
+alwaysApply: true
+---
+
 # General Project Guidelines
 
-## Tech Stack
-- TODO
+## Technical Stack
+- <React>
+- Dependency management: <npm>
+- Hosted on <Gitlab>
+  - URL: <https://gitlab.com/owner/repo>
+  - Name: <Name>
+  - ID: <00000000>
+- Automated build and deployment with <GitLab CI>
 
-## Project Structure Rules
-- **Layered Organization**: Organize directories by function or domain, following the "separation of concerns" principle
-- **Consistent Naming**: Use consistent and descriptive directory and file names that reflect their purpose and content
-- **Modularity**: Place related functions in the same module to reduce cross-module dependencies
-- **Appropriate Nesting**: Avoid overly deep directory nesting, generally no more than 3-4 levels
-- **Resource Classification**: Separate code, resources, configuration, and test files
-- **Dependency Management**: Manage dependencies centrally to avoid multiple declarations
-- **Convention Over Configuration**: Follow standard project structure conventions for the language or framework
+## Code Style
+- Keep code concise and readable  
+- Use meaningful variable and function names  
+- Add appropriate comments to explain complex logic  
+- Follow the official style guides of each programming language  
+
+## Project Structure
+- Keep the project structure clear and follow modular principles  
+- Place related functions in the same directory  
+- Use appropriate directory names that reflect the content  
 
 ## General Development Principles
-- **Testability**: Write testable code; components should maintain single responsibility
-- **DRY Principle**: Avoid duplicate code; extract common logic into separate functions or classes
-- **Code Simplicity**: Keep code simple and clear, following the KISS principle (Keep It Simple and Straightforward)
-- **Naming Conventions**: Use descriptive variable, function, and class names that reflect their purpose and meaning
-- **Comments & Documentation**: Add comments for complex logic and write clear documentation explaining functionality and usage
-- **Consistent Style**: Follow the official style guide and code conventions for the project or language
-- **Leverage Ecosystem**: Prefer mature libraries and tools, avoid unnecessary custom implementations
-- **Architecture Design**: Consider maintainability, scalability, and performance requirements
-- **Version Control**: Write meaningful commit messages and keep logically related changes in the same commit
-- **Exception Handling**: Properly handle edge cases and errors, providing useful error messages
+- Write testable code  
+- Avoid duplicated code (DRY principle)  
+- Prefer mature tools over reinventing the wheel  
+- Consider code maintainability and scalability  
 
 ## Response Language
-- Always reply to users in English
-
-## Project Rule File Description
-This project uses the following rule files:
-- general.mdc: General guidelines (this file)
-- document.mdc: Documentation guidelines
-- git.mdc: Git commit guidelines
-- xxx.mdc: XXX language development guidelines
-
+- Always respond to users in English  
