@@ -1,11 +1,6 @@
 ---
-description:
-globs:
-alwaysApply: false
----
----
 description: This rule explains the conventions and best practices for Java and SpringBoot.
-globs: **/*.java
+globs: *.java
 alwaysApply: false
 ---
 

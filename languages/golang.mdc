@@ -1,11 +1,6 @@
 ---
-description: 
-globs: 
-alwaysApply: false
----
----
-description: golang 编码规则和最佳实践。
-globs: **/*.go
+description: conventions and best practices for Golang
+globs: *.go
 alwaysApply: false
 ---
 
